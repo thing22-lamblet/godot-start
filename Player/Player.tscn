@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dt37q7jxmky8i"]
+[gd_scene load_steps=25 format=3 uid="uid://dt37q7jxmky8i"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_2l4ac"]
 [ext_resource type="Texture2D" uid="uid://ccovs3e6ysiud" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_73jec"]
@@ -90,6 +90,68 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_snk2w"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_gij61"]
+resource_name = "Run"
+
+[sub_resource type="Animation" id="Animation_8mlsw"]
+resource_name = "Jump"
+
+[sub_resource type="Animation" id="Animation_p23ok"]
+resource_name = "Death"
+
+[sub_resource type="Animation" id="Animation_meoji"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtml0"]
+_data = {
+"Death": SubResource("Animation_p23ok"),
+"Idle": SubResource("Animation_snk2w"),
+"Jump": SubResource("Animation_8mlsw"),
+"RESET": SubResource("Animation_meoji"),
+"Run": SubResource("Animation_gij61")
+}
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2l4ac")
 
@@ -97,8 +159,18 @@ script = ExtResource("1_2l4ac")
 shape = SubResource("CapsuleShape2D_w103e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_0d43f")
-animation = &"Death"
+animation = &"Idle"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.6, 1.6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+libraries = {
+"": SubResource("AnimationLibrary_qtml0")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
