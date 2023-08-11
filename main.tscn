@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq7mw6alr0vfv"]
+[gd_scene load_steps=3 format=3 uid="uid://dq7mw6alr0vfv"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_l4gcu"]
+[ext_resource type="PackedScene" uid="uid://bysjbict6dr4x" path="res://BG.tscn" id="2_dtkav"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_l4gcu")
@@ -19,6 +20,8 @@ offset_right = 658.0
 offset_bottom = 546.0
 tooltip_text = "This button does nothing."
 text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_dtkav")]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
