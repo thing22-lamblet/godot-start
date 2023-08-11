@@ -20,12 +20,12 @@ position = Vector2(63, 52)
 position = Vector2(511.75, 496)
 shape = SubResource("RectangleShape2D_kg8ww")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-14, 146)
-shape = SubResource("RectangleShape2D_jqivx")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1041, 159)
+shape = SubResource("RectangleShape2D_jqivx")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-16, 152)
 shape = SubResource("RectangleShape2D_jqivx")
 
 [node name="Panel" type="Panel" parent="."]
