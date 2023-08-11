@@ -17,6 +17,7 @@ scale = Vector2(3, 2.7)
 texture = ExtResource("1_hml32")
 
 [node name="Houses" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Plant-house" type="Sprite2D" parent="Houses"]
