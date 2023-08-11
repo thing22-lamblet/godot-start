@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bysjbict6dr4x"]
+
+[ext_resource type="Texture2D" uid="uid://cj582pa7h7qw6" path="res://sunny-land-phaser-project/sunny-land/assets/environment/back.png" id="1_hml32"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(3, 2.7)
+texture = ExtResource("1_hml32")
