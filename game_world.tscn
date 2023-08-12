@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1l3vlejhhbdt"]
+[gd_scene load_steps=8 format=3 uid="uid://d1l3vlejhhbdt"]
 
 [ext_resource type="PackedScene" uid="uid://dt37q7jxmky8i" path="res://Player/Player.tscn" id="1_i2y0s"]
 [ext_resource type="Script" path="res://BG.gd" id="1_kpxlg"]
 [ext_resource type="Texture2D" uid="uid://4fmuktaya2iv" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/tileset.png" id="1_vdj3i"]
 [ext_resource type="Texture2D" uid="uid://cj582pa7h7qw6" path="res://sunny-land-phaser-project/sunny-land/assets/environment/back.png" id="2_lt3sf"]
+[ext_resource type="PackedScene" uid="uid://bfytxsg5imhld" path="res://Frog.tscn" id="5_46j02"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca1i6"]
 texture = ExtResource("1_vdj3i")
@@ -426,3 +427,6 @@ texture = ExtResource("2_lt3sf")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_i2y0s")]
 position = Vector2(190, 226)
+
+[node name="Frog" parent="." instance=ExtResource("5_46j02")]
+position = Vector2(366, 344)
