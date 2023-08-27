@@ -425,8 +425,12 @@ position = Vector2(575, 326)
 scale = Vector2(3, 2.7)
 texture = ExtResource("2_lt3sf")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_i2y0s")]
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_i2y0s")]
 position = Vector2(190, 226)
 
-[node name="Frog" parent="." instance=ExtResource("5_46j02")]
-position = Vector2(366, 344)
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="Frog" parent="Mobs" instance=ExtResource("5_46j02")]
+position = Vector2(347, 223)
