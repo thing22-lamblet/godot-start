@@ -15,10 +15,10 @@ func _on_player_detection_body_entered(body):
 		print(player.position)
 
 		#look_at(player.position)
-		#var direction = (player.position - self.position).normalized()
-		# if direction.x > 0:
-
-		# 	print("Right")
-		# else:
-		# 	print("Left")
+		var direction = (player.position - self.position).normalized()
+		print(direction)
+		if direction.x > 0:
+			print("Right")
+		else:
+			print("Left")
 
