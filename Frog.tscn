@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfytxsg5imhld"]
+[gd_scene load_steps=22 format=3 uid="uid://bfytxsg5imhld"]
 
 [ext_resource type="Texture2D" uid="uid://c8screggfcvpc" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/spritesheets/frog-jump.png" id="1_37lhm"]
 [ext_resource type="Script" path="res://Frog.gd" id="1_261ou"]
@@ -111,14 +111,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fq66r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5b5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5b5")
 }],
-"loop": true,
+"loop": false,
 "name": &"Resting",
 "speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6oere"]
-radius = 91.2711
+radius = 190.196
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnx4o"]
+size = Vector2(12.9437, 13)
 
 [node name="Frog" type="CharacterBody2D"]
 scale = Vector2(1.00435, 1)
@@ -132,12 +150,21 @@ shape = SubResource("RectangleShape2D_wrqwl")
 scale = Vector2(1, 0.97561)
 sprite_frames = SubResource("SpriteFrames_gt0sr")
 animation = &"Resting"
-frame = 3
-frame_progress = 0.959549
+frame = 4
+frame_progress = 0.652171
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+visible = false
 shape = SubResource("CircleShape2D_6oere")
 
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(-0.497834, 0)
+shape = SubResource("RectangleShape2D_fnx4o")
+
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
