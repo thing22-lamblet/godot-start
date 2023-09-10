@@ -42,3 +42,11 @@ func _on_player_death_body_entered(body):
 		get_node("AnimatedSprite2D").play("Death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
+
+func _on_player_collide_body_entered(body):
+	if body.name == "Player":
+		body.health -= 3
+		chase = false
+		get_node("AnimatedSprite2D").play("Death")
+		await get_node("AnimatedSprite2D").animation_finished
+		self.queue_free()
