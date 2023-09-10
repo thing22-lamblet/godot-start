@@ -81,7 +81,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hrd81")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -150,8 +150,6 @@ shape = SubResource("RectangleShape2D_wrqwl")
 scale = Vector2(1, 0.97561)
 sprite_frames = SubResource("SpriteFrames_gt0sr")
 animation = &"Resting"
-frame = 4
-frame_progress = 0.652171
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
