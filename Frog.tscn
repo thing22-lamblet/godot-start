@@ -83,7 +83,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -127,7 +127,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_he5b5")
 }],
-"loop": false,
+"loop": true,
 "name": &"Resting",
 "speed": 5.0
 }]
@@ -149,7 +149,7 @@ shape = SubResource("RectangleShape2D_wrqwl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1, 0.97561)
 sprite_frames = SubResource("SpriteFrames_gt0sr")
-animation = &"Resting"
+animation = &"Death"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 

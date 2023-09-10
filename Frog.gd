@@ -6,7 +6,7 @@ var player
 var chase = false
 
 func _ready():
-	get_node("AnimatedSprite2D").play("Idle")
+	get_node("AnimatedSprite2D").play("Resting")
 func _physics_process(delta):
 	#Gravity for frog
 	velocity.y += gravity * delta
@@ -37,6 +37,8 @@ func _on_player_detection_body_exited(body):
 
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
+		velocity.x = 0
+		chase = false
 		get_node("AnimatedSprite2D").play("Death")
 		await get_node("AnimatedSprite2D").animation_finished
 		self.queue_free()
