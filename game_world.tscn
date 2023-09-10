@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1l3vlejhhbdt"]
+[gd_scene load_steps=9 format=3 uid="uid://d1l3vlejhhbdt"]
 
 [ext_resource type="PackedScene" uid="uid://dt37q7jxmky8i" path="res://Player/Player.tscn" id="1_i2y0s"]
 [ext_resource type="Script" path="res://BG.gd" id="1_kpxlg"]
@@ -406,6 +406,20 @@ texture = ExtResource("1_vdj3i")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ca1i6")
 
+[sub_resource type="GDScript" id="GDScript_06dl4"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = \"HP = \" + (get_node(\"../../Player/Player\").health)
+"
+
 [node name="GameWorld" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -434,3 +448,14 @@ position = Vector2(190, 226)
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_46j02")]
 position = Vector2(478, 342)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HP" type="Label" parent="UI"]
+offset_left = 340.0
+offset_top = -131.0
+offset_right = 380.0
+offset_bottom = -97.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+script = SubResource("GDScript_06dl4")
