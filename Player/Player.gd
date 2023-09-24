@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var health = 10
-const SPEED = 300.0
+const SPEED = 300.00
 const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -37,3 +37,6 @@ func _physics_process(delta):
 		anim.play("Fall")
 	move_and_slide()
 	
+	if health <= 0:
+		queue_free()
+		get_tree().change_scene_to_file("res://main.tscn")
