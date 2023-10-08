@@ -1,5 +1,5 @@
 Adam and Dad are working this Godot tutorial:
-	https://youtu.be/S8lMTwSRoRg?t=4303
+	https://youtu.be/S8lMTwSRoRg?t=5109
 
 1.  get extra monitor working?
 	- Adam's laptop USB-C does not seem to drive the portable
