@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4fmuktaya2iv" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/environment/layers/tileset.png" id="1_vdj3i"]
 [ext_resource type="Texture2D" uid="uid://cj582pa7h7qw6" path="res://sunny-land-phaser-project/sunny-land/assets/environment/back.png" id="2_lt3sf"]
 [ext_resource type="PackedScene" uid="uid://bfytxsg5imhld" path="res://Frog.tscn" id="5_46j02"]
+[ext_resource type="Script" path="res://Gold.gd" id="6_sbava"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ca1i6"]
 texture = ExtResource("1_vdj3i")
@@ -420,20 +421,6 @@ func _process(delta):
 	text = \"HP = \" + str(get_node(\"../../Player/Player\").health)
 "
 
-[sub_resource type="GDScript" id="GDScript_lof3o"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	text = \"HP = \" + str(get_node(\"../../Player/Player\").health)
-"
-
 [node name="GameWorld" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -520,10 +507,10 @@ theme_override_font_sizes/font_size = 24
 script = SubResource("GDScript_pjhmo")
 
 [node name="Gold" type="Label" parent="UI"]
-offset_left = 137.0
-offset_top = 139.0
-offset_right = 177.0
-offset_bottom = 173.0
+offset_left = 138.0
+offset_top = 190.0
+offset_right = 178.0
+offset_bottom = 224.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-script = SubResource("GDScript_lof3o")
+script = ExtResource("6_sbava")
