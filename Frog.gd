@@ -37,7 +37,7 @@ func _on_player_death_body_entered(body):
 		death()
 func _on_player_collide_body_entered(body):
 	if body.name == "Player":
-		body.health -= 3
+		Game.playerHP -= 3
 		death()
 func death():
 	Game.Gold += 1
