@@ -439,11 +439,12 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(575, 326)
 scale = Vector2(3, 2.7)
 texture = ExtResource("2_lt3sf")
+metadata/_edit_lock_ = true
 
 [node name="Player" type="Node2D" parent="."]
 
 [node name="Player" parent="Player" instance=ExtResource("1_i2y0s")]
-position = Vector2(190, 226)
+position = Vector2(206, 321)
 
 [node name="Mobs" type="Node2D" parent="."]
 
