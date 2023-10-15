@@ -40,7 +40,7 @@ func _on_player_collide_body_entered(body):
 		Game.playerHP -= 3
 		death()
 func death():
-	Game.Gold += 1
+	Game.Gold +=  1
 	Utils.saveGame()
 	chase = false
 	get_node("AnimatedSprite2D").play("Death")

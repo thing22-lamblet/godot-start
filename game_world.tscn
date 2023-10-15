@@ -448,52 +448,52 @@ position = Vector2(190, 226)
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(441, 341)
+position = Vector2(1132, 344)
 
 [node name="Frog2" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(388, 342)
+position = Vector2(1079, 345)
 
 [node name="Frog3" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(766, 291)
+position = Vector2(1457, 294)
 
 [node name="Frog4" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(882, 344)
+position = Vector2(1573, 347)
 
 [node name="Frog5" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(482, 343)
+position = Vector2(1173, 346)
 
 [node name="Frog6" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(345, 340)
+position = Vector2(1036, 343)
 
 [node name="Frog7" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(697, 286)
+position = Vector2(1388, 289)
 
 [node name="Frog8" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(876, 311)
+position = Vector2(1567, 314)
 
 [node name="Frog9" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(536, 343)
+position = Vector2(1227, 346)
 
 [node name="Frog10" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(305, 339)
+position = Vector2(996, 342)
 
 [node name="Frog11" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(753, 322)
+position = Vector2(1444, 325)
 
 [node name="Frog12" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(928, 330)
+position = Vector2(1619, 333)
 
 [node name="Frog13" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(608, 340)
+position = Vector2(1299, 343)
 
 [node name="Frog14" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(260, 342)
+position = Vector2(951, 345)
 
 [node name="Frog15" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(683, 328)
+position = Vector2(1374, 331)
 
 [node name="Frog16" parent="Mobs" instance=ExtResource("5_46j02")]
-position = Vector2(840, 329)
+position = Vector2(1531, 332)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
